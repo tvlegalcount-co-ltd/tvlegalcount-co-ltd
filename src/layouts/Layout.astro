@@ -7,9 +7,18 @@ import { getFullPath } from "../utils/url";
 interface Props {
   title: string;
   description?: string;
+  image?: string;
 }
 
-const { title, description = "TV Legal Count - Professional consulting services" } = Astro.props;
+const {
+  title,
+  description = "TV Legal Count - Dịch vụ tư vấn pháp lý, thành lập doanh nghiệp, kế toán thuế trọn gói và chuyên nghiệp",
+  image = "/og-image.jpg",
+} = Astro.props;
+
+const siteUrl = Astro.site?.href || "https://www.tvlegalcount.com";
+const fullTitle = title.includes("TV Legal Count") ? title : `${title} - TV Legal Count`;
+const fullImage = image.startsWith("http") ? image : getFullPath(image);
 ---
 
 <!doctype html>
@@ -22,7 +31,29 @@ const { title, description = "TV Legal Count - Professional consulting services"
     <link rel="apple-touch-icon" href={getFullPath("/apple-touch-icon.svg")} />
     <link rel="manifest" href={getFullPath("/site.webmanifest")} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- Primary Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImage} />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="TV Legal Count" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={siteUrl} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullImage} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={siteUrl} />
   </head>
   <body class="bg-white text-gray-900">
     <Header />

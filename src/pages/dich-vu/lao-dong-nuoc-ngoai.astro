@@ -1,140 +1,343 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
 
-const page = {
+const service = {
+  id: "lao-dong-nuoc-ngoai",
   title: "Dịch vụ Lao động nước ngoài",
-  description: "Visa, giấy phép lao động, thẻ tạm trú cho người nước ngoài tại Việt Nam",
   icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  description: "Visa, giấy phép lao động, thẻ tạm trú cho người nước ngoài tại Việt Nam",
+  whatYouProvide: [
+    "Bản sao hộ chiếu còn giá trị (không quá 6 tháng từ ngày cấp)",
+    "VISA nhập cảnh Việt Nam",
+    "Giấy chứng nhận đăng ký kinh doanh hoặc giấy phép thành lập doanh nghiệp",
+    "Hồ sơ năng lực công ty",
+    "Bản cam kết sử dụng người lao động nước ngoài",
+    "Giấy xác nhận không thuộc đối tượng cấp giấy phép lao động (nếu có)",
+  ],
+  whatYouReceive: [
+    "Giấy phép lao động cho người nước ngoài",
+    "Thẻ tạm trú cho người nước ngoài",
+    "Gia hạn visa, thẻ tạm trú",
+    "Tư vấn thủ tục xuất nhập cảnh",
+    "Hỗ trợ khai báo tạm trú",
+    "Tư vấn miễn phí các vấn đề phát sinh",
+  ],
+  consulting: [
+    "Tư vấn điều kiện cấp giấy phép lao động cho người nước ngoài",
+    "Tư vấn thủ tục xin visa cho người nước ngoài",
+    "Tư vấn cấp thẻ tạm trú cho người lao động nước ngoài",
+    "Tư vấn các trường hợp không cần giấy phép lao động",
+    "Tư vấn gia hạn giấy phép lao động, thẻ tạm trú",
+    "Tư vấn miễn phí các vấn đề pháp lý liên quan",
+  ],
 };
-
-const services = [
-  {
-    title: "Visa cho người nước ngoài",
-    description: "Tư vấn và làm thủ tục xin visa Việt Nam cho người nước ngoài",
-    icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
-    href: "#",
-
-    features: [
-      "Visa du lịch (DL)",
-      "Visa kinh doanh (DN)",
-      "Visa đầu tư (ĐT)",
-      "Visa làm việc (LĐ)",
-      "Visa diện hiệp định",
-      "Gia hạn visa",
-    ],
-  },
-  {
-    title: "Giấy phép lao động",
-    description: "Xin cấp giấy phép lao động cho người nước ngoài làm việc tại Việt Nam",
-    icon: "M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2",
-    href: "#",
-
-    features: [
-      "Điều kiện cấp giấy phép lao động",
-      "Hồ sơ xin cấp GPLĐ",
-      "Giấy xác nhận không thuộc đối tượng",
-      "Gia hạn GPLĐ",
-      "Cấp lại GPLĐ",
-    ],
-  },
-  {
-    title: "Thẻ tạm trú",
-    description: "Làm thủ tục cấp thẻ tạm trú cho người nước ngoài",
-    icon: "M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2",
-    href: "#",
-
-    features: [
-      "Thẻ tạm trú 2 năm",
-      "Thẻ tạm trú cho người lao động",
-      "Thẻ tạm trú cho nhà đầu tư",
-      "Thẻ tạm trú cho người thân",
-      "Gia hạn thẻ tạm trú",
-    ],
-  },
-  {
-    title: "Thủ tục xuất nhập cảnh",
-    description: "Các thủ tục liên quan đến xuất nhập cảnh cho người nước ngoài",
-    icon: "M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4",
-    href: "#",
-
-    features: [
-      "Khai báo tạm trú",
-      "Đăng ký nơi cư trú",
-      "Cấp lại giấy tờ nhập cảnh",
-      "Thu hồi, hủy bỏ visa",
-      "Tư vấn xuất cảnh",
-    ],
-  },
-];
-const faqs = [
-  {
-    q: "Điều kiện để xin giấy phép lao động cho người nước ngoài?",
-    a: '<p><strong>Người sử dụng lao động</strong> cần đáp ứng các điều kiện sau:</p><ul class="list-disc ml-6 mt-2"><li>Có nhu cầu tuyển dụng vị trí mà người lao động Việt Nam chưa đáp ứng được</li><li>Đã thực hiện tuyển dụng nhưng không tìm được người lao động Việt Nam</li><li>Có văn bản giải trình nhu cầu tuyển dụng người nước ngoài</li></ul>',
-  },
-  {
-    q: "Thời hạn của giấy phép lao động là bao lâu?",
-    a: '<p>Thời hạn <strong>giấy phép lao động</strong> không quá <strong>2 năm</strong> và có thể gia hạn thêm.</p><p class="mt-2">Đối với người nước ngoài là thành viên Hội đồng quản trị, Hội đồng thành viên, Giám đốc hoặc Tổng giám đốc, người quản lý doanh nghiệp theo pháp luật Việt Nam: thời hạn không quá <strong>5 năm</strong>.</p>',
-  },
-  {
-    q: "Những trường hợp nào không cần giấy phép lao động?",
-    a: '<p>Theo quy định, người nước ngoài <strong>không cần xin giấy phép lao động</strong> trong các trường hợp:</p><ul class="list-disc ml-6 mt-2"><li>Thành viên góp vốn, sở hữu vốn điều lệ</li><li>Chủ sở hữu công ty TNHH một thành viên</li><li>Người lao động nước ngoài vào Việt Nam cung cấp dịch vụ</li><li>Nhà đầu tư</li><title>Luật sư, chuyên gia</li><li>Người lao động nước ngoài trong thời hạn 03 tháng</li></ul>',
-  },
-  {
-    q: "Thủ tục cấp thẻ tạm trú cho người nước ngoài?",
-    a: '<p>Người nước ngoài <strong>cần cấp thẻ tạm trú</strong> khi:</p><ul class="list-disc ml-6 mt-2"><li>Được cấp visa có ký hiệu <strong>LD1, LD2, ĐT1, ĐT2, ĐT3, ĐT4, LV1, LV2, HĐ1, HĐ2, NN1, NN2, DH</strong></li><li>Được cấp giấy phép lao động</li><li>Người nước ngoài kết hôn với người Việt Nam</li></ul><p class="mt-2">Thẻ tạm trú có giá trị sử dụng không quá <strong>2 năm</strong> và có thể gia hạn.</p>',
-  },
-];
 ---
 
 <PageLayout
-  title={page.title}
-  icon={page.icon}
-  description={page.description}
+  title={service.title}
+  icon={service.icon}
+  description={service.description}
   heroBackground="/hero-service.jpg"
 >
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="max-w-6xl mx-auto">
-      <!-- Introduction -->
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Dịch vụ lao động nước ngoài toàn diện</h2>
-        <p class="text-xl text-gray-900 max-w-3xl mx-auto">
-          Chúng tôi có kinh nghiệm dày dặn trong việc tư vấn thủ tục cho người lao động nước ngoài
-          tại Việt Nam, bao gồm các dịch vụ như: Visa cho người nước ngoài tại Việt Nam, Giấy phép
-          lao động, Thẻ tạm trú.
-        </p>
+  <!-- What You Provide Section -->
+  <section class="py-8 md:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 p-8">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4 md:mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3"
+          >
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg
+                class="w-6 h-6 text-blue-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </div>
+            KHÁCH HÀNG CẦN CUNG CẤP GÌ?
+          </h2>
+          <ul class="space-y-4">
+            {
+              service.whatYouProvide.map((item) => (
+                <li class="flex items-start">
+                  <svg
+                    class="w-6 h-6 text-blue-700 mt-0.5 mr-4 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-lg">{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        {
-          services.map((service) => (
-            <div class="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div class="bg-gradient-to-r from-blue-700 to-blue-800 text-white p-6">
-                <div class="flex items-start gap-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-white/30 backdrop-blur-md rounded-lg flex items-center justify-center border-2 border-white/40">
+  <!-- What You Receive Section -->
+  <section class="py-8 md:py-16 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 p-8">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4 md:mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3"
+          >
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg
+                class="w-6 h-6 text-blue-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            SẢN PHẨM KHÁCH HÀNG SẼ NHẬN ĐƯỢC
+          </h2>
+          <ul class="space-y-4">
+            {
+              service.whatYouReceive.map((item) => (
+                <li class="flex items-start">
+                  <svg
+                    class="w-6 h-6 text-blue-700 mt-0.5 mr-4 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-lg">{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting Section -->
+  <section class="py-8 md:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 p-8">
+          <h2
+            class="text-2xl font-bold text-gray-900 mb-4 md:mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3"
+          >
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg
+                class="w-6 h-6 text-blue-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            LUẬT SƯ SẼ TƯ VẤN NHỮNG GÌ?
+          </h2>
+          <ul class="space-y-4">
+            {
+              service.consulting.map((item) => (
+                <li class="flex items-start">
+                  <svg
+                    class="w-6 h-6 text-blue-700 mt-0.5 mr-4 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-lg">{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-8 md:py-16 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-4 md:mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            TẠI SAO CẦN THUÊ ĐƠN VỊ TƯ VẤN CHUYÊN NGHIỆP?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Đảm bảo thủ tục nhanh chóng, chính xác và tránh rủi ro pháp lý
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 p-8">
+          <ul class="space-y-5">
+            {
+              [
+                "Thay mặt doanh nghiệp hoàn tất các thủ tục xin giấy phép lao động, visa, thẻ tạm trú cho người nước ngoài",
+                "Tư vấn điều kiện cần thiết để cấp giấy phép lao động cho người nước ngoài",
+                "Hỗ trợ chuẩn bị hồ sơ, giấy tờ theo đúng quy định của cơ quan chức năng",
+                "Tư vấn các trường hợp không cần cấp giấy phép lao động",
+                "Dịch vụ trọn gói: Tư vấn và thực hiện từ A-Z, tiết kiệm thời gian và chi phí",
+              ].map((item, index) => (
+                <li class="flex items-start">
+                  <div class="flex-shrink-0 w-8 h-8 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold mr-4">
+                    {index + 1}
+                  </div>
+                  <span class="text-gray-700 text-lg">{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose TV Legal Count Section -->
+  <section class="py-8 md:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-4 md:mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            TẠI SAO HƠN 2.000 DOANH NGHIỆP ĐÃ CHỌN TV LEGAL COUNT ĐỒNG HÀNH?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Chúng tôi cam kết mang lại giá trị vượt trội cho doanh nghiệp của bạn
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {
+            [
+              {
+                title: "KINH NGHIỆM",
+                icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+                color: "blue",
+                items: [
+                  "10+ năm kinh nghiệm trong lĩnh vực tư vấn lao động nước ngoài",
+                  "Đội ngũ luật sư, chuyên viên pháp lý giàu kinh nghiệm",
+                  "Thực hiện thành công hàng ngàn giấy phép lao động",
+                  "Hiểu rõ quy định pháp luật về lao động nước ngoài",
+                ],
+              },
+              {
+                title: "TRỌN GÓI",
+                icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+                color: "green",
+                items: [
+                  "Tư vấn và thực hiện từ A-Z",
+                  "Giấy phép lao động, thẻ tạm trú, visa",
+                  "Hồ sơ đầy đủ, đúng quy định",
+                  "Theo dõi hết hạn, nhắc gia hạn",
+                ],
+              },
+              {
+                title: "NHÂN SỰ",
+                icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+                color: "purple",
+                items: [
+                  "Đội ngũ luật sư giỏi, tận tâm, chuyên nghiệp",
+                  "Thiết thực, sẻ chia, đồng hành cùng doanh nghiệp",
+                  "Phục vụ từ 7:30 đến 21:00 mỗi ngày",
+                  "Hỗ trợ qua nhiều kênh: Hotline, Zalo, Email",
+                ],
+              },
+              {
+                title: "GIÁ DỊCH VỤ",
+                icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+                color: "yellow",
+                items: [
+                  "Chi phí hợp lý, cạnh tranh nhất thị trường",
+                  "Bảng giá dịch vụ minh bạch, rõ ràng",
+                  "Không phát sinh chi phí ẩn",
+                  "Tư vấn miễn phí 100% các vấn đề pháp lý",
+                ],
+              },
+              {
+                title: "QUY TRÌNH DỊCH VỤ",
+                icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
+                color: "red",
+                items: [
+                  "Tiếp nhận yêu cầu trong vòng 15 phút",
+                  "Tư vấn chi tiết, báo giá rõ ràng",
+                  "Thi hành nhanh chóng, đúng tiến độ",
+                  "Bàn giao hồ sơ đầy đủ, đúng luật",
+                ],
+              },
+              {
+                title: "HỖ TRỢ TRỌN ĐỜI",
+                icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+                color: "pink",
+                items: [
+                  "Hỗ trợ, tư vấn miễn phí trọn đời",
+                  "Giải đáp mọi thắc mắc pháp lý",
+                  "Hỗ trợ làm việc với cơ quan chức năng",
+                  "Đồng hành cùng doanh nghiệp phát triển",
+                ],
+              },
+            ].map((feature) => (
+              <div class="bg-white rounded-lg shadow-lg border border-gray-100 p-6">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
-                      class="w-6 h-6 text-white"
+                      class="w-6 h-6 text-blue-700"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      stroke-width="2"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" d={service.icon} />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d={feature.icon}
+                      />
                     </svg>
                   </div>
-                  <div class="flex-1">
-                    <h3 class="text-xl font-bold mb-2">{service.title}</h3>
-                    <p class="text-white/90 text-sm">{service.description}</p>
-                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">{feature.title}</h3>
                 </div>
-              </div>
-
-              <div class="p-6">
-                <ul class="space-y-3 mb-4 md:mb-6">
-                  {service.features.map((feature) => (
+                <ul class="space-y-2">
+                  {feature.items.map((item) => (
                     <li class="flex items-start">
                       <svg
-                        class="w-5 h-5 text-gray-900 mt-0.5 mr-3 flex-shrink-0"
+                        class="w-5 h-5 text-blue-700 mt-0.5 mr-2 flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -146,55 +349,108 @@ const faqs = [
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span class="text-gray-900">{feature}</span>
+                      <span class="text-gray-600">{item}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-
-      <!-- Process Section -->
-      <div class="bg-gradient-to-r from-blue-700 to-blue-800 rounded-lg p-8 mb-16 text-white">
-        <h3 class="text-2xl font-bold mb-4 md:mb-6 text-center">
-          Quy trình xin giấy phép lao động
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {
-            [
-              { step: "1", title: "Khai báo", desc: "Khai báo nhu cầu sử dụng người nước ngoài" },
-              { step: "2", title: "Tuyển dụng", desc: "Tuyển dụng người lao động Việt Nam" },
-              { step: "3", title: "Hồ sơ", desc: "Chuẩn bị hồ sơ xin giấy phép lao động" },
-              { step: "4", title: "Cấp phép", desc: "Nộp hồ sơ và nhận giấy phép lao động" },
-            ].map((item) => (
-              <div class="text-center">
-                <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center font-bold text-lg mx-auto mb-4 border-2 border-white/30">
-                  {item.step}
-                </div>
-                <h4 class="font-bold mb-2">{item.title}</h4>
-                <p class="text-sm text-blue-100">{item.desc}</p>
               </div>
             ))
           }
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- FAQ Section -->
-      <div class="rounded-lg p-8">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 md:mb-6 text-center">
-          MỘT SỐ CÂU HỎI THƯỜNG GẶP
-        </h3>
-        <div class="space-y-4 max-w-4xl mx-auto">
+  <!-- Process Section -->
+  <section class="py-8 md:py-16 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-4 md:mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            QUY TRÌNH 4 BƯỚC XIN GIẤY PHÉP LAO ĐỘNG
+          </h2>
+          <p class="text-xl text-gray-600">
+            Chúng tôi cam kết quy trình nhanh chóng, chuyên nghiệp
+          </p>
+        </div>
+
+        <div class="space-y-6">
           {
-            faqs.map((faq) => (
+            [
+              {
+                step: "1",
+                title: "Khai báo nhu cầu",
+                desc: "Khai báo nhu cầu sử dụng người lao động nước ngoài với cơ quan chức năng",
+              },
+              {
+                step: "2",
+                title: "Tuyển dụng",
+                desc: "Tuyển dụng người lao động Việt Nam trước khi tuyển dụng người nước ngoài",
+              },
+              {
+                step: "3",
+                title: "Chuẩn bị hồ sơ",
+                desc: "Chuẩn bị hồ sơ xin giấy phép lao động theo quy định",
+              },
+              {
+                step: "4",
+                title: "Cấp phép",
+                desc: "Nộp hồ sơ và nhận giấy phép lao động từ cơ quan chức năng",
+              },
+            ].map((item) => (
+              <div class="flex gap-6 items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  {item.step}
+                </div>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p class="text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-8 md:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-4 md:mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">MỘT SỐ CÂU HỎI THƯỜNG GẶP</h2>
+          <p class="text-xl text-gray-600">
+            Giải đáp những thắc mắc phổ biến về lao động nước ngoài
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          {
+            [
+              {
+                q: "Điều kiện để xin giấy phép lao động cho người nước ngoài?",
+                a: '<p><strong>Người sử dụng lao động</strong> cần đáp ứng các điều kiện sau:</p><ul class="list-disc list-inside mt-3 space-y-1"><li>Có nhu cầu tuyển dụng vị trí mà người lao động Việt Nam chưa đáp ứng được</li><li>Đã thực hiện tuyển dụng nhưng không tìm được người lao động Việt Nam</li><li>Có văn bản giải trình nhu cầu tuyển dụng người nước ngoài</li></ul>',
+              },
+              {
+                q: "Thời hạn của giấy phép lao động là bao lâu?",
+                a: '<p>Thời hạn <strong>giấy phép lao động</strong> không quá <strong>2 năm</strong> và có thể gia hạn thêm.</p><p class="mt-2">Đối với người nước ngoài là thành viên Hội đồng quản trị, Hội đồng thành viên, Giám đốc hoặc Tổng giám đốc, người quản lý doanh nghiệp theo pháp luật Việt Nam: thời hạn không quá <strong>5 năm</strong>.</p>',
+              },
+              {
+                q: "Những trường hợp nào không cần giấy phép lao động?",
+                a: '<p>Theo quy định, người nước ngoài <strong>không cần xin giấy phép lao động</strong> trong các trường hợp:</p><ul class="list-disc list-inside mt-3 space-y-1"><li>Thành viên góp vốn, sở hữu vốn điều lệ</li><li>Chủ sở hữu công ty TNHH một thành viên</li><li>Người lao động nước ngoài vào Việt Nam cung cấp dịch vụ</li><li>Nhà đầu tư</li><li>Luật sư, chuyên gia</li><li>Người lao động nước ngoài trong thời hạn 03 tháng</li></ul>',
+              },
+              {
+                q: "Thủ tục cấp thẻ tạm trú cho người nước ngoài?",
+                a: '<p>Người nước ngoài <strong>cần cấp thẻ tạm trú</strong> khi:</p><ul class="list-disc list-inside mt-3 space-y-1"><li>Được cấp visa có ký hiệu <strong>LD1, LD2, ĐT1, ĐT2, ĐT3, ĐT4, LV1, LV2, HĐ1, HĐ2, NN1, NN2, DH</strong></li><li>Được cấp giấy phép lao động</li><li>Người nước ngoài kết hôn với người Việt Nam</li></ul><p class="mt-2">Thẻ tạm trú có giá trị sử dụng không quá <strong>2 năm</strong> và có thể gia hạn.</p>',
+              },
+            ].map((faq) => (
               <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
                 <details class="group">
                   <summary class="flex items-center justify-between p-3 md:p-6 cursor-pointer hover:bg-gray-100 transition-colors duration-200">
                     <h3 class="text-lg font-semibold text-gray-900 pr-4">{faq.q}</h3>
                     <svg
-                      class="w-6 h-6 text-gray-900 transform group-open:rotate-180 transition-transform duration-200 flex-shrink-0"
+                      class="w-6 h-6 text-gray-500 transform group-open:rotate-180 transition-transform duration-200 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -208,7 +464,7 @@ const faqs = [
                     </svg>
                   </summary>
                   <div class="p-3 md:p-6 border-t border-gray-200">
-                    <div class="prose prose-sm max-w-none text-gray-900" set:html={faq.a} />
+                    <div class="prose prose-sm max-w-none text-gray-700" set:html={faq.a} />
                   </div>
                 </details>
               </div>
@@ -217,5 +473,5 @@ const faqs = [
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </PageLayout>

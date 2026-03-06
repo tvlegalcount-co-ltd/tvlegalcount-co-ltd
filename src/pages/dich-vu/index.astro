@@ -1,7 +1,13 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
 import { companyInfo } from "../../config";
 import { getFullPath } from "../../utils/url";
+
+const page = {
+  title: "Dịch vụ",
+  description: "Giải pháp toàn diện giúp doanh nghiệp phát triển bền vững",
+  icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+};
 
 const services = [
   {
@@ -87,47 +93,12 @@ const services = [
 ];
 ---
 
-<Layout title="Dịch vụ - TV Legal Count">
-  <!-- Hero Section -->
-  <section
-    class="relative py-20 bg-cover bg-top bg-no-repeat"
-    style="background-image: url('/hero-service.jpg')"
-  >
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-gray-800/85 via-gray-700/80 to-gray-900/85">
-    </div>
-
-    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="flex items-center justify-center gap-6 mb-4 md:mb-6 md:mb-8">
-          <div
-            class="flex-shrink-0 w-20 h-20 bg-white/30 backdrop-blur-md rounded-lg flex items-center justify-center border-2 border-white/40 shadow-xl"
-          >
-            <svg
-              class="w-10 h-10 text-white drop-shadow-lg"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              stroke-width="2.5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-              ></path>
-            </svg>
-          </div>
-        </div>
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg">
-          Dịch vụ của chúng tôi
-        </h1>
-        <p class="text-xl text-blue-100 drop-shadow-md">
-          Chúng tôi cung cấp các giải pháp toàn diện giúp doanh nghiệp của bạn phát triển bền vững
-        </p>
-      </div>
-    </div>
-  </section>
-
+<PageLayout
+  title={page.title}
+  icon={page.icon}
+  description={page.description}
+  heroBackground="/hero-service.jpg"
+>
   <!-- Why Choose Us -->
   <section class="py-8 md:py-16 bg-blue-100">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -480,12 +451,12 @@ const services = [
   </section>
 
   <!-- Process Section -->
-  <section class="py-20 bg-blue-100">
+  <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-4 md:mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Quy trình 5 bước thành lập doanh nghiệp
+            QUY TRÌNH 5 BƯỚC THÀNH LẬP DOANH NGHIỆP
           </h2>
           <p class="text-xl text-gray-900">
             Chúng tôi cam kết quy trình nhanh chóng, chuyên nghiệp
@@ -536,30 +507,4 @@ const services = [
       </div>
     </div>
   </section>
-
-  <!-- CTA Section -->
-  <section class="bg-blue-100 text-white py-16">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Bạn cần tư vấn thêm?</h2>
-        <p class="text-xl text-blue-100 mb-4 md:mb-6 md:mb-8">
-          Liên hệ ngay với chúng tôi để được tư vấn miễn phí và báo giá chi tiết
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={getFullPath("/lien-he")}
-            class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 inline-block"
-          >
-            Gửi yêu cầu tư vấn
-          </a>
-          <a
-            href={`tel:${companyInfo.hotline.replace(/[\s+]/g, "")}`}
-            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-200 inline-block"
-          >
-            Hotline: {companyInfo.hotline}
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</Layout>
+</PageLayout>

@@ -8,12 +8,13 @@ interface Props {
   icon: string;
   description?: string;
   heroBackground?: string;
+  image?: string;
 }
 
-const { title, icon, description = "", heroBackground = "" } = Astro.props;
+const { title, icon, description = "", heroBackground = "", image = heroBackground } = Astro.props;
 ---
 
-<Layout title={`${title} - TV Legal Count`}>
+<Layout title={title} description={description} image={image}>
   <!-- Breadcrumb -->
   <nav class="bg-gray-50 border-b border-gray-200">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">

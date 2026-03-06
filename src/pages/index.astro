@@ -4,9 +4,16 @@ import { companyInfo } from "../config";
 import { getFullPath } from "../utils/url";
 import { Image } from "astro:assets";
 import heroBg from "../assets/hero-bg.jpg";
+
+const seo = {
+  title: "TV Legal Count - Tư vấn thành lập doanh nghiệp, pháp lý, kế toán thuế",
+  description:
+    "Dịch vụ tư vấn pháp lý, thành lập doanh nghiệp, kế toán thuế trọn gói và chuyên nghiệp. Hơn 2.000 doanh nghiệp tin tưởng chọn TV Legal Count đồng hành.",
+  image: "/og-home.jpg",
+};
 ---
 
-<Layout title="Trang chủ - TV Legal Count">
+<Layout title={seo.title} description={seo.description} image={seo.image}>
   <!-- Hero Section with Background Image -->
   <section class="relative min-h-screen flex items-center justify-center">
     <!-- Background Image -->
